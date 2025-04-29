@@ -1,13 +1,15 @@
-# Head First Design Patterns (2014 update)
+# Abstract
+In my research, I am developing SpatialTransformerGNN, a bilevel graph neural network that integrates spatial and molecular information to improve cell type classification.  This model is motivated by the limitations of current tools like DNABERT, which captures genomic sequence patterns without spatial awareness, and scBiGNN, which models gene-cell relationships but lacks spatial integration.  These gaps highlight the need for models that can jointly reason over both transcriptomic data and tissue architecture.
+SpatialTransformerGNN is designed to address this by combining graph neural networks with transformer layers in a bilevel architecture.  The model captures local dependencies between genes and cells, while a self-attention mechanism learns broader spatial structure.  A cross-modal attention module further aligns latent representations from scRNA-seq and spatial transcriptomics (ST), producing joint embeddings that are both biologically meaningful and spatially coherent.
+The model is currently being trained and validated on publicly available datasets from the embryonic mouse brain.  As part of ongoing work, I aim to evaluate its performance using classification accuracy, spatial coherence, and neighborhood preservation metrics.  Ultimately, this research aims to contribute a flexible framework supporting deeper insights into tissue organization, cell communication, and spatial regulation, key areas in fundamental biology and applied fields like cancer research and regenerative medicine.
 
-I have recently updated all the code for Head First Design Patterns to be compatible
-with Java 8. This new code accompanies an update for the book, released in July, 2014.
+# Problems
+Integrating spatial transcriptomics (ST) with single-cell RNA sequencing (scRNA-seq) remains a central challenge in advancing our understanding of tissue architecture and cellular identity.  While scRNA-seq offers high-resolution molecular profiles of individual cells, it lacks information about their spatial localization.  Conversely, ST provides valuable spatial context but often at the cost of reduced gene coverage and resolution.
+Although models such as DNABERT and scBiGNN have achieved meaningful progress in their respective domains, which include modeling sequence features and graph-based cellular relationships.  They are not designed to jointly model spatial and transcriptomic data in an interpretable and biologically consistent manner.
+This disconnect hinders our ability to explore how cells are organized, how they interact within their microenvironments, and how these patterns evolve during development or disease.  To address this, there is a clear need for an integrative framework capable of capturing both fine-grained molecular interactions (e.g., gene-gene and cell-cell) and broader spatial patterns across tissue sections, ultimately enabling more holistic insights into complex biological systems.
+# Acknowledgement
+I would like to sincerely thank my PhD advisor, Dr. Seungchan Kim, at Prairie View A&M University, for his guidance, mentorship, and continuous support throughout this research.  I have benefited greatly from a collaborative and intellectually stimulating environment as part of the Department of Electrical and Computer Engineering and the Center for Computational Systems Biology (CCSB). I also gratefully acknowledge the teams at the Allen Institute  for MERFISH spatial transcriptomics dataset of a single adult mouse brain (Zhuang-ABCA-1)  for making their datasets publicly available. Resources like these are essential to advancing computational biology and spatial omics research. https://alleninstitute.github.io/abc_atlas_access/descriptions/Zhuang-ABCA-1.html
 
-Download the code and compile and run from the command line, or load the code into 
-project in Eclipse (Kepler, with the Java 8 beta patch).
-
-https://wiki.eclipse.org/JDT/Eclipse_Java_8_Support_For_Kepler
-
-
-Other links for the book are available on the book page at <a href="http://wickedlysmart.com/head-first-design-patterns/">wickedlysmart.com</a>.
+# For Reproducibility 
+The process dataset for this work is available on my Google Drive. Kindly email: frankfurtmacmoses@gmail.com to share the file 
 
