@@ -12,4 +12,6 @@ I would like to sincerely thank my PhD advisor, Dr. Seungchan Kim, at Prairie Vi
 
 # For Reproducibility 
 The process dataset for this work is available on my Google Drive. Kindly email: frankfurtmacmoses@gmail.com to share the file 
+### Link: https://drive.google.com/file/d/1lOZO5XRBq5_IEcWHvtLDel7JrLXQ3ct3/view?usp=drive_link
+Run preprocess_data.ipynb to process these data for the reseach 
 
